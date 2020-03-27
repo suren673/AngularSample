@@ -38,7 +38,6 @@ dialogConfig.disableClose = true;
 dialogConfig.autoFocus = true;
 dialogConfig.width = '50%';
 this.dialog.open(AddDepComponent, dialogConfig);
-
   }
 
   applyFilter(filtervalue: string){
