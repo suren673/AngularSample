@@ -1,0 +1,58 @@
+<div class='d-flex justify-content-between'>
+    <H4> Update Employee</H4>
+    <button mat-button (click)="OnClose()">
+        <mat-icon>Close</mat-icon>
+    </button>
+    </div>
+
+<div style="overflow:auto; height:400px;">
+    <!--<form #form="ngForm" (submit)="onSubmit(form)">-->
+
+
+    <div>
+        <div>
+            <span class="input-group-text">Employee Name</span>
+        </div>
+    <input  name="EmployeeName" class="form-control"
+          required minlength="4" appForbiddenName="bob"
+          [(ngModel)]="service.formData.EmployeeName" #EmployeeName="ngModel" >
+
+        </div>
+        <div>
+            <div>
+                <span class="input-group-text">Department</span>
+            </div>
+        <select  required type="text" name="Department" class="form-control"
+             
+              [(ngModel)]="service.formData.Department" #Department="ngModel" >
+             <!--<option *ngFor ="let dl of listItems" [value]="dl">
+                  {{dl}}
+              </option>-->
+           </select>
+        </div>
+                <div>
+                    <div>
+                        <span class="input-group-text">MailID</span>
+                    </div>
+                <input name="MailID" class="form-control"
+                      required minlength="4" appForbiddenName="bob"
+                      [(ngModel)]="service.formData.MailID" #Department="ngModel" >
+                      
+                    </div>
+                    <div>
+                        <div>
+                            <span class="input-group-text">DOJ</span>
+                        </div>
+                        <input matInput [matDatepicker]="picker" class="form-control"
+                           [(ngModel)]="service.formData.DOJ" #Department="ngModel" >
+
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </div>
+
+                        <button class="mt-4" mat-raised-button color="primary" type="submit" >Add Employee
+
+                        </button>
+                   
+                    </div>
+      

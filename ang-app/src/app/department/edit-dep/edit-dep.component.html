@@ -1,0 +1,12 @@
+<div class='d-flex justify-content-between'>
+    <H4>Edit Department</H4>
+    <button mat-button (click)="OnClose()">
+        <mat-icon>Close</mat-icon>
+    </button>
+    </div>
+    
+    <input id="name" name="name" class="form-control"
+          required minlength="4" appForbiddenName="bob"
+          [(ngModel)]="service.formData.DepartmentID" #DepartmentName="ngModel" >
+    
+        
